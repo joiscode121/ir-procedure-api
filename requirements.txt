@@ -3,3 +3,4 @@ uvicorn
 gunicorn
 sqlalchemy
 pydantic
+python-multipart
