@@ -7,8 +7,8 @@ from app.routers import procedures, irradiation, operators, frames, teaching, an
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="RadFlow API",
-    description="Radiology Procedure Intelligence Platform",
+    title="IR Procedure Platform API",
+    description="IR Procedure Intelligence Platform",
     version="1.0.0"
 )
 
@@ -32,7 +32,7 @@ app.include_router(search.router, prefix="/api/search", tags=["search"])
 
 @app.get("/")
 def read_root():
-    return {"message": "RadFlow API - Radiology Procedure Intelligence Platform"}
+    return {"message": "IR Procedure Platform API - IR Procedure Intelligence Platform"}
 
 @app.get("/health")
 def health_check():
